@@ -46,11 +46,5 @@ class ChosenDropdownField extends DropdownField {
 		}
 		return parent::Field($attributes);
 	}
-
-	function AAField($attributes = array()) {
-		Requirements::javascript(FRAMEWORK_DIR."/admin/thirdparty/chosen/chosen/chosen.jquery.js");
-		Requirements::css(FRAMEWORK_DIR."/admin/thirdparty/chosen/chosen/chosen.css");
-		$this->addExtraClass('chosen');
-		return parent::Field($attributes);
-	}
+	
 }
