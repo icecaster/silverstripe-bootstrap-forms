@@ -37,13 +37,20 @@ class ChosenDropdownField extends DropdownField {
 	 * @param array $attributes The attributes to include on the formfield
 	 * @return SSViewer
 	 */
-	public function FieldHolder($attributes = array ()) {
+	public function Field($attributes = array ()) {
 		Requirements::javascript(FRAMEWORK_DIR."/admin/thirdparty/chosen/chosen/chosen.jquery.js");
 		Requirements::css(FRAMEWORK_DIR."/admin/thirdparty/chosen/chosen/chosen.css");
 		$this->addExtraClass('chosen');
 		if(!$this->getAttribute('data-search-threshold')) {
 			$this->setSearchThreshold(self::$default_search_threshold);
 		}
-		return parent::FieldHolder($attributes);
+		return parent::Field($attributes);
+	}
+
+	function AAField($attributes = array()) {
+		Requirements::javascript(FRAMEWORK_DIR."/admin/thirdparty/chosen/chosen/chosen.jquery.js");
+		Requirements::css(FRAMEWORK_DIR."/admin/thirdparty/chosen/chosen/chosen.css");
+		$this->addExtraClass('chosen');
+		return parent::Field($attributes);
 	}
 }
