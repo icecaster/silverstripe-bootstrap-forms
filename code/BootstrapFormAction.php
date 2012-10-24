@@ -7,7 +7,7 @@
  * @author Uncle Cheese <unclecheese@leftandmain.com>
  * @package bootstrap_forms
  */
-class BootstrapFormAction extends DataExtension {
+class BootstrapFormAction extends Extension {
 
 	function setOwner($owner, $ownerBaseClass = null) {
 		parent::setOwner($owner, $ownerBaseClass);
